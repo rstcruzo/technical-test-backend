@@ -1,9 +1,26 @@
 # Backend
 Ejemplos de requests que se pueden hacer al backend se pueden encontrar en el archivo [api-test.http](https://github.com/rstcruzo/technical-test-backend/blob/master/api-test.http).
 
+## Run it
+
+El servidor inicia en el puerto *8000*.
+
+```console
+python3 server.py
+```
+
 # Frontend
 Se implementó utilizando React y [Material-ui](https://material-ui.com/).
-Se está utilizando el *in-browser babel transformer*, no es ideal pero suficiente para un demo.
+Se está utilizando el *in-browser babel transformer*, no es ideal pero suficiente para un demo. También se estará
+descargando las librerías completas siempre, por lo cuál demora un poco más en cargar la página.
+
+## RUn it
+
+El servidor inicia en el puerto *5000*.
+
+```console
+python3 client.py
+```
 
 # Demo
 ![](demo.gif)
