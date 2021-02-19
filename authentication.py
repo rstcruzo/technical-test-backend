@@ -33,7 +33,6 @@ def decode_auth_token(auth_token):
 
     """
     payload = jwt.decode(auth_token, SECRET_KEY)
-    print(type(payload['sub']))
     return payload['sub']
 
 
