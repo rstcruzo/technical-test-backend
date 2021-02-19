@@ -1,6 +1,4 @@
-# Run with "python server.py"
-
-from bottle import run, route, request, response, hook, Bottle
+from bottle import run, request, response, Bottle
 from truckpad.bottle.cors import CorsPlugin, enable_cors
 from models import (Note, note_schema, notes_schema, create_tables_if_needed,
                     User, user_schema)
@@ -94,6 +92,7 @@ def login():
 
     return {'user_id': user.id,
             'auth_token': auth_token}
+
 
 create_tables_if_needed()
 

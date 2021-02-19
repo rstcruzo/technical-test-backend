@@ -1,4 +1,3 @@
-# Run with "python client.py"
 from bottle import get, run, static_file
 
 
@@ -6,8 +5,10 @@ from bottle import get, run, static_file
 def index():
     return static_file('index.html', root=".")
 
+
 @get('/index.js')
-def index():
+def index_script():
     return static_file('index.js', root=".")
+
 
 run(host='localhost', port=5000)

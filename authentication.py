@@ -1,9 +1,8 @@
-import jwt
-import os
-from datetime import datetime, timedelta
-
 from models import User
 from peewee import DoesNotExist
+
+import jwt
+import os
 
 
 SECRET_KEY = os.getenv('SECRET_KEY', 'aDevelopmentSecretKey')
