@@ -82,6 +82,7 @@ class NewNoteDialog extends React.Component {
             label="Title"
             onChange={this.setNoteTitle}/>
           <TextField
+            style={{marginTop: 10}}
             variant="outlined"
             fullWidth
             label="Content"

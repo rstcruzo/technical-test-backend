@@ -1,0 +1,68 @@
+# This file is used to test the API while in development
+:local = http://localhost:8000
+
+# Valid register
+POST :local/register
+{
+  "username": "rodrigo",
+  "password": "pass"
+}
+
+# Invalid register: missing password
+POST :local/register
+{
+  "username": "rodrigo"
+}
+
+# Invalid register: missing username
+POST :local/register
+{
+  "password": "pass"
+}
+
+# Valid login
+POST :local/login
+{
+  "username": "rodrigo",
+  "password": "pass"
+}
+
+# Invalid login: unexisting user
+POST :local/login
+{
+  "username": "askljdaskljd",
+  "password": "pass"
+}
+
+# Invalid login: incorrect password
+POST :local/login
+{
+  "username": "rodrigo",
+  "password": "wrong"
+}
+
+# Get notes
+GET :local/notes
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTM2ODA1NDIsInN1YiI6Mn0.nOmcaTNUFg1xBE2FHPj_A6SG7nBUGIxSVmxGPWSc_f8
+
+# Get notes without authentication
+GET :local/notes
+
+# Get notes invalid token
+GET :local/notes
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTM2Nzc5OTksInN1YiI6Mn0.LuRHfUMXdSvWjIZQUzzWqNh1a85YhGOGpxm6UiwT6p0
+
+# Create note
+POST :local/notes
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTM2Nzc5OTksInN1YiI6Mn0.LuRHfUMXdSvWjIZQUzzWqNh1a85YhGOGpxm6UiwT6pc
+{
+  "title": "Another note",
+  "content": "Remember to do that"
+}
+
+# Create note without authentication
+POST :local/notes
+{
+  "title": "Another note",
+  "content": "Remember to do that"
+}
