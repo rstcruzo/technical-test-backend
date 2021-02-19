@@ -1,6 +1,16 @@
+# Backend
+Ejemplos de requests que se pueden hacer al backend se pueden encontrar en el archivo [api-test.http](https://github.com/rstcruzo/technical-test-backend/blob/master/api-test.http).
+
+# Frontend
+Se implementó utilizando React y [Material-ui](https://material-ui.com/).
+Se está utilizando el *in-browser babel transformer*, no es ideal pero suficiente para un demo.
+
+# Demo
+![](demo.gif)
+
 # Creación de un API REST
 
-La prueba consistirá en crear un simple API REST para un único recurso, la prueba se dividirá en una funcionalidad básica y en funcionalidades adicionales que sumarán puntos a la evaluación. 
+La prueba consistirá en crear un simple API REST para un único recurso, la prueba se dividirá en una funcionalidad básica y en funcionalidades adicionales que sumarán puntos a la evaluación.
 
 Este repositorio contiene los archivos base, los cambios realizados deben subirse en un repositorio propio, el link de ese repositorio debe enviarse por email.
 
