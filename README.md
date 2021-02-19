@@ -14,7 +14,7 @@ Se implementó utilizando React y [Material-ui](https://material-ui.com/).
 Se está utilizando el *in-browser babel transformer*, no es ideal pero suficiente para un demo. También se estará
 descargando las librerías completas siempre, por lo cuál demora un poco más en cargar la página.
 
-## RUn it
+## Run it
 
 El servidor inicia en el puerto *5000*.
 
