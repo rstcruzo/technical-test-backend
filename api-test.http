@@ -43,18 +43,18 @@ POST :local/login
 
 # Get notes
 GET :local/notes
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTM2ODA1NDIsInN1YiI6Mn0.nOmcaTNUFg1xBE2FHPj_A6SG7nBUGIxSVmxGPWSc_f8
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjF9.Kv3XT5YPALrPJCwYhhPB3uaemvEafa_ZfjjMpM6_DbY
 
 # Get notes without authentication
 GET :local/notes
 
 # Get notes invalid token
 GET :local/notes
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTM2Nzc5OTksInN1YiI6Mn0.LuRHfUMXdSvWjIZQUzzWqNh1a85YhGOGpxm6UiwT6p0
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjF9.Kv3XT5YPALrPJCwYhhPB3uaemvEafa_ZfjjMpM6_DbI
 
 # Create note
 POST :local/notes
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTM2Nzc5OTksInN1YiI6Mn0.LuRHfUMXdSvWjIZQUzzWqNh1a85YhGOGpxm6UiwT6pc
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjF9.Kv3XT5YPALrPJCwYhhPB3uaemvEafa_ZfjjMpM6_DbY
 {
   "title": "Another note",
   "content": "Remember to do that"
@@ -65,4 +65,12 @@ POST :local/notes
 {
   "title": "Another note",
   "content": "Remember to do that"
+}
+
+# Create note with invalid tittle
+POST :local/notes
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjF9.Kv3XT5YPALrPJCwYhhPB3uaemvEafa_ZfjjMpM6_DbY
+{
+  "title": "",
+  "content": "This is a nice note"
 }

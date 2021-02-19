@@ -34,7 +34,7 @@ class Note(Model):
 class NoteSchema(Schema):
     id = fields.Int()
     title = fields.Str(required=True,
-                       validate=validate.Length(min=5))
+                       validate=validate.Length(min=1))
     content = fields.Str()
 
 
